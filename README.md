@@ -13,8 +13,8 @@ retries an approach that was already abandoned.
 npx skills add davidefornelli/project-handoff-skill
 ```
 
-Installs both skills (`project-handoff` and `project-resume`) into `.claude/skills/` (or
-your agent's equivalent). `npx skills update` keeps them current.
+Lands in `.claude/skills/` (or your agent's equivalent). `npx skills update` keeps it
+current.
 
 ## What it does
 
@@ -41,13 +41,13 @@ Then it sets the bar for what gets written down. The rules that matter most:
 Plus what a resume point owes a reader with no context, and when to split one file into
 two.
 
-## Companion: project-resume
+## Resuming
 
-The repo also ships `project-resume`, the other half of the loop. Where `project-handoff`
-writes the file, `project-resume` is what a cold session invokes to continue from it:
-find the handoff, go to the resume point, orient with the commands it names, check the
-facts the work depends on against the repo, fix the file where the world has moved, and
-start the named next task rather than a guessed one.
+The same skill runs the other direction too: invoked as `/project-handoff resume` (or
+when a session starts on a project whose history the agent lacks), it continues the
+project from its handoff — find the file, go to the resume point, orient with the
+commands it names, check the facts the work depends on against the repo, fix the file
+where the world has moved, and start the named next task rather than a guessed one.
 
 ## Where it came from
 

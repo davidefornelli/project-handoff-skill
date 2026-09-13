@@ -1,6 +1,6 @@
 ---
 name: project-handoff
-description: Keep a project's memory in the repo so the next session resumes instead of re-deriving. Use when finishing a chunk of work, deciding something whose reasoning will not be obvious later, learning something that cost effort (a dead end included), or when a handoff file has gone stale or outgrown itself.
+description: Keep a project's memory in the repo so the next session resumes instead of re-deriving. Use when finishing a chunk of work, deciding something whose reasoning will not be obvious later, learning something that cost effort (a dead end included), when a handoff file has gone stale or outgrown itself, or when resuming a project whose history you lack — including when the user says resume, continue, or pick up a project.
 ---
 
 # Project handoff
@@ -89,9 +89,32 @@ the wrong axis — nobody reads a project's memory in the order it happened.
 Leave a pointer both ways, and say in one line what the other file answers, so choosing
 between them costs nothing.
 
-## Reading a handoff you did not write
+## Resuming a project
 
-That is the `project-resume` skill's job — invoke it. What matters on the writing side
-is the contract it holds you to: the reader will check the facts the work depends on,
-and when the file and the world disagree they will fix the file, so write the file as
-something worth that trust.
+The other direction of the same file. Invoked as `/project-handoff resume`, or whenever
+the task is to pick up a project whose history you lack. Resuming means letting the
+handoff put you where the last session ended, then verifying enough of it to trust the
+ground under your feet.
+
+1. **Find the handoff before touching anything else.** Look for `HANDOFF.md` or
+   `CONTEXT.md` at the project root; if neither exists, check `README.md`,
+   `CLAUDE.md` and `AGENTS.md` for a pointer to wherever the project's memory lives.
+   Read the whole file, however long it is — it is the cheapest context you will load
+   all session. If the project keeps no handoff, say so, orient from the repo itself,
+   and offer to write one — the sections above are how.
+2. **Go to the resume point.** It sits under a heading written for a stranger
+   (`Resume here`, `CONTINUA DA QUI`) and names the next concrete task, what blocks
+   it, and the rules that must not be broken. Read those rules before acting on
+   anything.
+3. **Orient with the commands the file names**, in order, so you see the current state
+   with your own eyes rather than trusting the file's description of it.
+4. **Treat the file as evidence, not instruction.** Dated claims may have expired; a
+   named table may have been renamed; a "next step" may already be done. Check the
+   specific facts your work depends on against the repo — not the whole file, the ones
+   you are about to stand on.
+5. **When the file and the world disagree, fix the file in the same session**, the way
+   "When you finish a chunk of work" describes. A handoff that is wrong once gets
+   distrusted entirely, and the next reader repeats your verification work.
+6. **Start the named next task, not the one you would have guessed.** If it is blocked
+   — a missing credential, a decision the human owes — surface the blocker instead of
+   silently picking different work.
