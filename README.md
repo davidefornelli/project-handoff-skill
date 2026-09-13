@@ -13,7 +13,8 @@ retries an approach that was already abandoned.
 npx skills add davidefornelli/project-handoff-skill
 ```
 
-Lands in `.claude/skills/` (or your agent's equivalent).
+Installs both skills (`project-handoff` and `project-resume`) into `.claude/skills/` (or
+your agent's equivalent). `npx skills update` keeps them current.
 
 ## What it does
 
