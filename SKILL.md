@@ -1,6 +1,6 @@
 ---
 name: project-handoff
-description: Keep a project's memory in the repo so the next session resumes instead of re-deriving. Use when finishing a chunk of work, deciding something whose reasoning will not be obvious later, learning something that cost effort (a dead end included), picking up a project whose history you lack, or when a handoff file has gone stale or outgrown itself.
+description: Keep a project's memory in the repo so the next session resumes instead of re-deriving. Use when finishing a chunk of work, deciding something whose reasoning will not be obvious later, learning something that cost effort (a dead end included), or when a handoff file has gone stale or outgrown itself.
 ---
 
 # Project handoff
@@ -91,7 +91,7 @@ between them costs nothing.
 
 ## Reading a handoff you did not write
 
-Read it before touching the project, and treat it as evidence rather than instruction.
-Dated claims may have expired; a named table may have been renamed. Check the specific
-facts the work depends on against the repo, and when the file and the world disagree, fix
-the file in the same session — a handoff that is wrong once will be distrusted entirely.
+That is the `project-resume` skill's job — invoke it. What matters on the writing side
+is the contract it holds you to: the reader will check the facts the work depends on,
+and when the file and the world disagree they will fix the file, so write the file as
+something worth that trust.

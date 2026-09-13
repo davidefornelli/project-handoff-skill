@@ -37,8 +37,16 @@ Then it sets the bar for what gets written down. The rules that matter most:
 - **Scope a rule to the reason it exists**, or it blocks work it was never meant to.
 - **Verify the edit landed** — a find-and-replace that matches nothing reports success.
 
-Plus what a resume point owes a reader with no context, when to split one file into two,
-and how to read a handoff you did not write.
+Plus what a resume point owes a reader with no context, and when to split one file into
+two.
+
+## Companion: project-resume
+
+The repo also ships `project-resume`, the other half of the loop. Where `project-handoff`
+writes the file, `project-resume` is what a cold session invokes to continue from it:
+find the handoff, go to the resume point, orient with the commands it names, check the
+facts the work depends on against the repo, fix the file where the world has moved, and
+start the named next task rather than a guessed one.
 
 ## Where it came from
 
